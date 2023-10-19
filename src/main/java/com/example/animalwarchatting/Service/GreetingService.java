@@ -19,5 +19,4 @@ public class GreetingService {
         greetingRepository.save(greeting);
         return greeting;
     }
-
 }
