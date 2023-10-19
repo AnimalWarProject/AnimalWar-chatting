@@ -25,16 +25,6 @@ public class GreetingController {
                 .message(message.getContent())
                 .build();
         greetingRepository.save(greeting);
-
-
-
-//        채팅 저장
-//        Chatting chattiness = Chatting.builder()
-//                .name(greeting.getName())
-//                .message(greeting.getMessage())
-//                .build();
-//        chattingRepository.save(chattiness);
-
         return greeting;
     }
 
