@@ -1,4 +1,4 @@
-package com.example.animalwarchatting;
+package com.example.animalwarchatting.Config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

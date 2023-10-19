@@ -1,4 +1,4 @@
-package com.example.animalwarchatting;
+package com.example.animalwarchatting.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
