@@ -18,7 +18,7 @@ public class GreetingController {
     // 메시지를 수신하고 처리한 후, 처리된 결과를 특정 대상 주제(topic)로 다시 보내는 데 사용
     // 받은 메시지를 다시 "/topic/greetings"로 보낸다.(SendTo)
     public Greeting greet(HelloMessage message) {
-//
+
 //        Greeting greeting = new Greeting(message.getName(), message.getContent());
         Greeting greeting = Greeting.builder()
                 .name(message.getName())
