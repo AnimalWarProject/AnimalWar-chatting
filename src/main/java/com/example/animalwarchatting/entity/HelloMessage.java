@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class HelloMessage {
-    private String name;
+    private String nickname;
     private String content;
 }

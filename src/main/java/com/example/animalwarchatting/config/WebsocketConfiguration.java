@@ -17,7 +17,8 @@ public class WebsocketConfiguration implements WebSocketMessageBrokerConfigurer 
         WebSocketMessageBrokerConfigurer.super.registerStompEndpoints(registry);
         // #1 socket을 front와 연결
         // 클라이언트에서 웹소켓 STOMP 연결을 위해 지정할 엔드포인트 URL을 등록..
-        registry.addEndpoint("/stomp-endpoint") // 'stomp-endpoint'라는 엔드포인트를 등록, 클라이언트는 이 엔드포인트를 통해 WebSocket 연결을 시도
+        registry.addEndpoint("/stomp-endpoint").setAllowedOriginPatterns("*") // 'stomp-endpoint'라는 엔드포인트를 등록, 클라이언트는 이 엔드포인트를 통해 WebSocket 연결을 시도
+                // .setAllowedOriginPatterns("*") : crossOrigin 설정..
                 .withSockJS(); // SockJS를 사용하여 연결,  SockJS는 WebSocket이 지원되지 않는 일부 브라우저에서도 WebSocket 연결을 에뮬레이트하게 도와줍니다.
     }
 

@@ -1,17 +1,12 @@
 package com.example.animalwarchatting.config;
 
 
-
-import com.example.animalwarchatting.entity.User;
 import com.example.animalwarchatting.repository.UserRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-
-
-import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -29,6 +24,7 @@ public class JwtService {
                 .getBody();
 
         return TokenInfo.builder()
+                .userUUID(body.get("userUUID").toString()) // 오류로 인해 UUID -> String으로 바꿈..
                 .id((String) body.get("id"))
                 .nickName((String) body.get("nickName"))
                 .build();

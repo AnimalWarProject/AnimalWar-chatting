@@ -1,7 +1,5 @@
 package com.example.animalwarchatting.service;
 
-import com.example.animalwarchatting.config.JwtService;
-import com.example.animalwarchatting.config.TokenInfo;
 import com.example.animalwarchatting.entity.Greeting;
 import com.example.animalwarchatting.entity.HelloMessage;
 import com.example.animalwarchatting.repository.GreetingRepository;
@@ -15,7 +13,7 @@ public class GreetingService {
 
     public Greeting save(HelloMessage message) {
         Greeting greeting = Greeting.builder()
-                .name(message.getName())
+                .nickname(message.getNickname())
                 .message(message.getContent())
                 .build();
         greetingRepository.save(greeting);

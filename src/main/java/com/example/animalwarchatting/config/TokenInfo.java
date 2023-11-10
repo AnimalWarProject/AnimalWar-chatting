@@ -13,6 +13,7 @@ import java.util.UUID;
 @AllArgsConstructor @NoArgsConstructor
 @Builder @Getter
 public class TokenInfo {
+    private String userUUID;
     private String id;
     private String nickName;
 }

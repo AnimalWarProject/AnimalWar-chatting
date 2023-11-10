@@ -27,7 +27,7 @@ function connect() {
 
 // # 2-2
 function showGreeting(message) {
-
+    // #은 id임.. className같은거
     $("#greetings").append("<tr><td>" + message.name + " : " + message.message + "</td></tr>");
 }
 

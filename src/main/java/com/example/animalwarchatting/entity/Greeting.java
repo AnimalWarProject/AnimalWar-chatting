@@ -9,6 +9,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.nio.file.Path;
+
 // ## 2
 @Data
 @NoArgsConstructor
@@ -18,6 +20,6 @@ import lombok.NoArgsConstructor;
 public class Greeting {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    private String nickname;
     private String message;
 }
