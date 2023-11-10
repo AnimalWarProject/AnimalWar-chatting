@@ -23,7 +23,4 @@ public class GreetingController {
     public Greeting greet(HelloMessage message) {
         return greetingService.save(message);
     }
-
-
-
 }
