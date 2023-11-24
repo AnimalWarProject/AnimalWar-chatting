@@ -10,6 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.nio.file.Path;
+import java.util.UUID;
 
 // ## 2
 @Data
@@ -20,6 +21,7 @@ import java.nio.file.Path;
 public class Greeting {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private UUID uuid;
     private String nickname;
     private String message;
 }

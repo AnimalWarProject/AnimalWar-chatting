@@ -13,6 +13,7 @@ public class GreetingService {
 
     public Greeting save(HelloMessage message) {
         Greeting greeting = Greeting.builder()
+                .uuid(message.getUuid())
                 .nickname(message.getNickname())
                 .message(message.getContent())
                 .build();
